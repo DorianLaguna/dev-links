@@ -1,0 +1,135 @@
+<script setup>
+import LinkButton from './components/LinkButton.vue'
+import ProjectButton from './components/ProjectButton.vue'
+
+const socialLinks = [
+  {
+    url: 'https://www.instagram.com',
+    image: '/images/insta.png',
+    text: 'Instagram',
+  },
+  {
+    url: 'https://www.tiktok.com',
+    image: '/images/tiktok.png',
+    text: 'TikTok',
+  },
+  {
+    url: 'https://github.com/tu-usuario',
+    image: '/images/github.png',
+    text: 'GitHub',
+  },
+  {
+    url: 'https://www.linkedin.com/in/tu-usuario',
+    image: '/images/linkedin.png',
+    text: 'LinkedIn',
+  },
+]
+
+const additionalLinks = [
+  {
+    url: 'https://www.proyecto-prompts.com',
+    image: '/images/proyecto-prompts.png',
+    text: 'Proyecto Prompts',
+  },
+  {
+    url: 'https://www.otro-proyecto.com',
+    image: '/images/otro-proyecto.png',
+    text: 'Otro Proyecto',
+  },
+]
+</script>
+
+<template>
+  <div id="app">
+    <!-- Imagen de la marca personal -->
+    <div class="brand-image">
+      <img src="https://via.placeholder.com/150" alt="Marca Personal" />
+    </div>
+
+    <!-- Sección de enlaces a redes sociales -->
+    <div class="social-links">
+      <div class="social-links-container">
+        <LinkButton
+          v-for="(link, index) in socialLinks"
+          :key="index"
+          :url="link.url"
+          :image="link.image"
+        />
+      </div>
+    </div>
+
+    <!-- Sección de enlaces adicionales -->
+    <div class="additional-links">
+      <div class="additional-links-container">
+        <ProjectButton
+          v-for="(link, index) in additionalLinks"
+          :key="index"
+          :url="link.url"
+          :image="link.image"
+          :text="link.text"
+        />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style>
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Buena práctica */
+}
+</style>
+
+<style scoped>
+/* Estilos generales */
+#app {
+  text-align: center;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: radial-gradient(circle at 20% 10%, #ff0000, #7a00ff, #00004d);
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Imagen de la marca personal */
+.brand-image img {
+  width: 150px;
+  border-radius: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.brand-image img:hover {
+  transform: scale(1.1);
+}
+
+/* Redes sociales (horizontal) */
+.social-links {
+  margin: 10px auto; /* Reducir el margen para mantener la estética */
+  padding: 0; /* Eliminar el contenedor blanco */
+}
+
+.social-links-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Enlaces adicionales (vertical) */
+.additional-links {
+  margin: 10px auto; /* Reducir el margen para mantener la estética */
+  padding: 0; /* Eliminar el contenedor blanco */
+}
+
+.additional-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los botones horizontalmente */
+  justify-content: center; /* Asegurar el centrado vertical si es necesario */
+  gap: 15px;
+  width: 100%; /* Asegurar que ocupe todo el ancho disponible */
+}
+</style>

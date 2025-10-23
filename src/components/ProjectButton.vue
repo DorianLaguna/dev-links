@@ -17,7 +17,7 @@ defineProps({
 .project-button {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: 10px;
   padding: 10px 20px;
   border-radius: 5px;

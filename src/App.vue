@@ -4,22 +4,22 @@ import ProjectButton from './components/ProjectButton.vue'
 
 const socialLinks = [
   {
-    url: 'https://www.instagram.com',
+    url: 'https://www.instagram.com/dorian.devs/',
     image: '/images/insta.png',
     text: 'Instagram',
   },
   {
-    url: 'https://www.tiktok.com',
+    url: 'https://www.tiktok.com/@dorian.devs',
     image: '/images/tiktok.png',
     text: 'TikTok',
   },
   {
-    url: 'https://github.com/tu-usuario',
+    url: 'https://github.com/DorianLaguna',
     image: '/images/github.png',
     text: 'GitHub',
   },
   {
-    url: 'https://www.linkedin.com/in/tu-usuario',
+    url: 'https://www.linkedin.com/in/dorian-laguna/',
     image: '/images/linkedin.png',
     text: 'LinkedIn',
   },
@@ -27,14 +27,16 @@ const socialLinks = [
 
 const additionalLinks = [
   {
-    url: 'https://www.proyecto-prompts.com',
-    image: '/images/proyecto-prompts.png',
-    text: 'Proyecto Prompts',
+    url: 'https://www.share-prompts.com/',
+    text: '🤖 Proyecto Prompts',
   },
   {
-    url: 'https://www.otro-proyecto.com',
-    image: '/images/otro-proyecto.png',
-    text: 'Otro Proyecto',
+    url: 'https://curriculum.dev-dorian-laguna.com/',
+    text: '📄 Curriculum',
+  },
+  {
+    url: 'https://rubikgraph.dev-dorian-laguna.com/',
+    text: '🧊 Cubo rubik 3D',
   },
 ]
 </script>
@@ -43,7 +45,7 @@ const additionalLinks = [
   <div id="app">
     <!-- Imagen de la marca personal -->
     <div class="brand-image">
-      <img src="https://via.placeholder.com/150" alt="Marca Personal" />
+      <img src="/images/yo.jfif" alt="Marca Personal" />
     </div>
 
     <!-- Sección de enlaces a redes sociales -->
@@ -96,6 +98,8 @@ body {
 /* Imagen de la marca personal */
 .brand-image img {
   width: 150px;
+  height: 150px;
+  object-fit: cover;
   border-radius: 50%;
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);

@@ -35,6 +35,8 @@ defineProps({
 
 <style scoped>
 .project-card {
+  box-sizing: border-box;
+
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 24px;

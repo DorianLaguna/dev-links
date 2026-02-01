@@ -29,7 +29,7 @@ const projects = [
   {
     title: 'Ramo Eterno',
     description: 'Plataforma de regalos digitales con renderizado 3D y pagos seguros. Una experiencia única para momentos especiales.',
-    url: 'https://regalo.dev-dorian-laguna.com',
+    url: 'https://flowers-gift-dorianlaguna.com/',
     buttonText: 'Ver Proyecto'
   },
   {
